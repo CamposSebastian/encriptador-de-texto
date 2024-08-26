@@ -1,0 +1,262 @@
+/* Estilos generales */
+* {
+    background: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+/* Estilos del logo */
+.logo {
+    width: 8%;
+    padding-top: 10px;
+    margin: 20px 0 0 10px;
+}
+
+/* Estilos principales */
+main {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 80px;
+}
+
+/* Estilos de entrada de texto */
+.entrada-texto {
+    resize: none;
+    margin-top: 90px;
+    color: darkblue;
+    border: none;
+}
+
+.entrada-texto::placeholder {
+    color: darkblue;
+}
+
+.entrada-texto:focus {
+    outline: none;
+}
+
+/* Estilos de salida de texto */
+.salida-texto {
+    resize: none;
+    margin-left: 98px;
+    padding: 20px;
+    padding-bottom: 120px;
+    height: 612px;
+    color: darkblue;
+    background: white url(imagenes/notexto.png) no-repeat center;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.salida-texto:focus {
+    outline: none;
+}
+
+/* Estilos para restricciones */
+.restriccion {
+    color: grey;
+    font-size: 16px;
+}
+
+/* Estilos de los botones */
+.botones {
+    display: flex;
+    margin-top: 18px;
+}
+
+.encriptar, .desencriptar, .copiar {
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid darkblue;
+    height: 67px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.encriptar {
+    color: #D8DFE8;
+    background: darkblue;
+    width: 328px;
+}
+
+.desencriptar {
+    color: darkblue;
+    background: #D8DFE8;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.copiar {
+    color: darkblue;
+    background: #D8DFE8;
+    margin-top: 120px;
+    width: 336px;
+}
+
+.encriptar:hover, .desencriptar:hover, .copiar:hover {
+    background: #555;
+    color: white;
+}
+
+/* Estilos de la sección dinámica */
+.dinamico {
+    background: transparent;
+    position: absolute;
+    text-align: center;
+    margin: -240px 0 0 120px;
+    width: 360px;
+}
+
+.texto1 {
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
+}
+
+.texto2 {
+    font-size: 16px;
+    background: transparent;
+}
+
+/* Estilos del anuncio */
+.anuncio {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    bottom: 80px;
+    left: 100px;
+    margin-left: -75px;
+    padding: 5px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    border-radius: 10px;
+    opacity: .6;
+}
+
+/* Estilos responsivos */
+
+/* Laptops */
+@media screen and (max-width: 1366px) {
+    main {
+        margin-left: 0;
+    }
+
+    .entrada-texto {
+        margin-top: 50px;
+        width: 686px;
+        height: 400px;
+    }
+
+    .botones, .salida-texto {
+        margin-top: 0;
+    }
+
+    .salida-texto {
+        height: 550px;
+    }
+
+    .dinamico {
+        margin-top: -160px;
+    }
+
+    .copiar {
+        margin-top: 60px;
+    }
+}
+
+/* Tabletas */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 15%;
+        margin-top: 40px;
+    }
+
+    main {
+        display: block;
+        margin: 0 30px;
+    }
+
+    .entrada-texto {
+        margin-top: 60px;
+        width: 100%;
+        height: 700px;
+    }
+
+    .botones {
+        margin-top: 0;
+    }
+
+    .salida-texto {
+        margin: 40px 0;
+        width: 655px;
+        height: 300px;
+    }
+
+    .dinamico {
+        margin-top: -250px;
+        margin-left: 0;
+        width: 655px;
+    }
+
+    .texto1 {
+        margin-bottom: .5em;
+    }
+
+    .copiar {
+        margin-top: 100px;
+    }
+
+    .anuncio {
+        margin-left: 70px;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 375px) {
+    .logo {
+        width: 30%;
+        margin-top: 30px;
+    }
+
+    .entrada-texto {
+        margin-top: 20px;
+        height: 340px;
+    }
+
+    .botones {
+        display: block;
+        margin-top: 0;
+    }
+
+    .encriptar, .desencriptar {
+        width: 100%;
+    }
+
+    .desencriptar {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .salida-texto, .dinamico, .copiar {
+        width: 295px;
+    }
+
+    .dinamico {
+        margin-left: 10px;
+    }
+
+    .salida-texto {
+        padding: 10px;
+        height: 180px;
+        padding-bottom: 120px;
+    }
+
+    .anuncio {
+        width: 285px;
+        margin-left: -100px;
+    }
+}
